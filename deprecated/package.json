@@ -1,0 +1,60 @@
+{
+  "name": "basho",
+  "version": "1.0.0",
+  "description": "a small ArtBlocks explorer",
+  "main": "./src/main.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "escape-html": "^1.0.3",
+    "node-fetch": "^2.6.1"
+  },
+  "scripts": {
+    "start": "node tool/budo"
+  },
+  "browserslist": "last 2 Chrome versions",
+  "keywords": [
+    "artblocks",
+    "generative",
+    "art",
+    "chain",
+    "blockchain",
+    "ethereum",
+    "nft"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/basho.git"
+  },
+  "homepage": "https://github.com/mattdesl/basho",
+  "bugs": {
+    "url": "https://github.com/mattdesl/basho/issues"
+  },
+  "type": "module",
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "chokidar": "^2.1.8",
+    "esbuild": "^0.12.9",
+    "esbuild-plugin-glslx": "^0.0.2",
+    "esbuild-svelte": "^0.5.1",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "get-port": "^3.2.0",
+    "inject-lr-script": "^2.2.0",
+    "maxstache": "^1.0.7",
+    "mime": "^2.3.1",
+    "minimist": "^1.2.5",
+    "mkdirp": "^1.0.4",
+    "pretty-bytes": "^5.6.0",
+    "pretty-ms": "^7.0.1",
+    "right-now": "^1.0.0",
+    "sirv": "^1.0.12",
+    "svelte": "^3.38.2",
+    "three": "^0.129.0",
+    "ws": "^5.2.3"
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basho</title>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistration().then(function (reg) {
+          if (reg) {
+            reg.unregister().then(function () {
+              window.location.reload(true);
+            });
+          } else {
+            // window.location.reload(true);
+          }
+        });
+        // navigator.serviceWorker
+        //   .register("/serviceWorker.js", {
+        //     // scope: "./",
+        //   })
+        //   .then(
+        //     function (registration) {
+        //       // Registration was successful
+        //       console.log(
+        //         "ServiceWorker registration successful with scope: ",
+        //         registration.scope
+        //       );
+        //     },
+        //     function (err) {
+        //       // registration failed :(
+        //       console.log("ServiceWorker registration failed: ", err);
+        //     }
+        //   );
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html>

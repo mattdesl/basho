@@ -1,0 +1,12 @@
+uniform sampler2D tex;
+attribute vec3 pos;
+varying vec2 coord;
+
+export void vert() {
+  coord = pos.xy;
+  gl_Position = vec4(pos, 1.0);
+}
+
+export void frag() {
+  gl_FragColor = texture2D(tex, coord);
+}

@@ -1,0 +1,45 @@
+{
+  "name": "basho",
+  "version": "1.0.0",
+  "description": "an ArtBlocks viewer",
+  "main": "./index.html",
+  "license": "MIT",
+  "type": "module",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "@thi.ng/lowdisc": "^0.1.2",
+    "canvas": "^2.8.0",
+    "canvas-sketch-util": "^1.10.0",
+    "color-luminance": "^2.1.0",
+    "get-pixels": "^3.3.2",
+    "gifenc": "^1.0.3",
+    "mcfsd": "^1.2.1",
+    "stackblur": "^1.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+    "svelte": "^3.37.0",
+    "vite": "^2.3.8"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [
+    "artblocks",
+    "viewer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/basho.git"
+  },
+  "homepage": "https://github.com/mattdesl/basho",
+  "bugs": {
+    "url": "https://github.com/mattdesl/basho/issues"
+  }
+}
