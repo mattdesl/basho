@@ -1,6 +1,6 @@
 # basho
 
-Experiments with queryin & viewing ArtBlocks data from the blockchain.
+Experiments with querying & viewing ArtBlocks data from the blockchain.
 
 ## License
 
