@@ -3,7 +3,6 @@
   import {
     fetchOrderedTokensByOwner,
     fetchTokensByProject,
-    wrapCache,
   } from "./query";
   import { onMount } from "svelte";
   import TokenGrid from "./components/TokenGrid.svelte";
@@ -46,7 +45,7 @@
   export let padding = 20;
   export let margin = 0;
   export let maxWidth = Infinity;
-  export let quality = "image";
+  export let quality = "generator";
   export let columns = 3;
 
   function resize () {

@@ -67,24 +67,35 @@ async function fetchOrderedTokensByOwner(ownerAddress, opt = {}) {
   return tokens;
 }
 
-// Gets all AB tokens held by owner address
 async function fetchTokensByProject(projectId, opt = {}) {
   const { limit = 100 } = opt;
   const lastId = opt.lastId || opt.lastId === 0 ? opt.lastId : "-1";
-  const { tokens } = await query(
+  const { projects } = await query(
     PROJECT_EXPLORER,
     `{
-  tokens(first: ${limit}, orderBy: id, orderDirection: asc, where: {id_gt: "${lastId}", project: "${projectId}"}) {
-    id
-    project {
+  projects(where: {projectId: "53"}) {
+      projectId
       name
       artistName
-      curationStatus
-    }
+      tokens(first: ${limit}, orderBy: tokenId, orderDirection: asc, where:{tokenId_gt:"${lastId}"}) {
+        tokenId
+      }
   }
 }`
   );
-  return tokens;
+  if (!projects || projects.length <= 0) {
+    throw new Error("No tokens available for project " + projectId);
+  }
+  return projects[0].tokens.map((t) => {
+    return {
+      id: t.tokenId,
+      project: {
+        name: projects[0].name,
+        id: projects[0].projectId,
+        artistName: projects[0].artistName,
+      },
+    };
+  });
 }
 
 // Gets AB contracts currently in use and the nextProjectId
